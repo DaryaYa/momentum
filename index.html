@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  
+    <header class="header">  
+      <div class="weather">
+        <div class="temperature"><span class="temperature1"></span><span class="units">°C</span></div>
+        <div class="sign">
+          <img class="weather-icon" src="" alt="">
+          <p class="weather-description"></p>
+        </div>
+        <div class="overcast">
+          <p><span class="feels-like">Feels like: </span><span class="feelsLike"></span><span class="units">°C</span></p>
+          <p><span class="windy">Wind: </span><span class="wind"></span> m/s</p>
+          <p><span class="hum">Humidity: </span><span class="humidity"></span>%</p>
+        </div>
+      </div>
+      <div class="place">
+        <p class="place-city">Your City is <span class="location" contenteditable="true"
+            title='maintenance of changeable location is in process :-)'></span></p>
+      <!-- <button class="button loc-button">Your Location</button> -->
+        <div class="error"></div>
+      </div>
+    </header>
+  <section class="section">      
+    <button class="bg-button button">Change BackGround</button>
+    <div class="today-date">
+    <div class="time"></div>
+  <div class="date"></div>
+  </div>
+  
+  <h1>
+    <span class="greeting"></span>
+    <span class="name" contenteditable="true"></span>
+  </h1>
+  <h2>What Is Your Focus For Today?</h2>
+  <h2 class="focus" contenteditable="true"></h2>
+  <div class="quote">
+    <button class="quote-button button">Change Quote</button>
+    <div class="quote-text">
+      <p class="quote-today"></p>
+      <p class="quote-author"></p>
+    </div>      
+  </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>

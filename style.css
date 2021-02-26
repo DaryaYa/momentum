@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: antiquewhite;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./assets/images/overlay.png');
+  transition: background-image 1s ease-in-out;
+  /* background-color: black; */
+
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.section {
+  width: 100%;
+}
+
+.place {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.place-city {
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  /* position: absolute; */
+  right: 1rem;
+  top: 2.5rem;
+}
+
+.location {
+  font-style: italic;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+.location[contenteditable]:focus {
+   content: 'Enter your city';
+    display: inline-block;
+}
+
+.weather {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.weather-icon {
+  height: 60px;
+}
+
+.button {
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: rgba(116, 78, 41, 0.548);
+  cursor: pointer;
+}
+
+.today-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.time {
+  font-size: 8rem;
+  width: 26rem;
+}
+.date {
+  font-size: 2rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+[contenteditable] {
+    display: inline-block;
+    border-bottom: 1px solid bisque;
+    outline: none;
+}
+[contenteditable]:empty::before {
+    content: 'Enter here';
+    display: inline-block;
+    color: cadetblue;
+}
+[contenteditable]:empty:focus::before {
+    content: 'Start typing';
+    color: gray;
+}
+
+.quote {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.quote-text {
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 2rem;
+}
+
+.quote-today {
+  font-size: 1.5rem;
+}
+
+.quote-author {
+  font-weight: 600;
+}
+
+.quote-button {
+  width: fit-content;
+  align-self: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+  .time {
+    font-size: 6rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .time {
+    font-size: 3rem;
+    width: 10rem;
+  }
+  .bg-button {
+    margin-top: 5rem;
+  }
+  body {
+    background-size: auto;
+  }
+}
+
