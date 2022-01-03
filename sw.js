@@ -28,7 +28,7 @@ self.addEventListener('activate', evt => {
     })
   );
 });
-// When we change the name we could have multiple cache, to avoid that we need to delet the old cache, so with this function we check the key that is our cache naming, if it is different from the actual naming we delete it, in this way we will always have only the last updated cache.
+// When we change the name we could have multiple cache, to avoid that we need to delete the old cache, so with this function we check the key that is our cache naming, if it is different from the actual naming we delete it, in this way we will always have only the last updated cache.
 // fetch event
 self.addEventListener('fetch', evt => {
   evt.respondWith(
