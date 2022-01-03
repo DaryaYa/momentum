@@ -248,7 +248,7 @@ loc.addEventListener('keypress', (e) => {
 // locButton.addEventListener('click', ()=> {
 //   getLocation();
 //   localStorage.setItem('loc', loc.textContent);
-//   // city = loc.textContent;
+//   city = loc.textContent;
 //   errorLoc.textContent = '';
 // })
 
