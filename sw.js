@@ -2,13 +2,13 @@ const staticCacheName = 'site-static-v1';
 const assets = [
   '/',
   '/index.html',
+ '/script.js',
   '/style.css',
-  '/script.js',
+  '/script.min.js',
+  'https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap',
   'https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap',
-  'https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap'
 ];
-
-// событие install
+// install event
 self.addEventListener('install', evt => {
   evt.waitUntil(
     caches.open(staticCacheName).then((cache) => {
@@ -17,7 +17,7 @@ self.addEventListener('install', evt => {
     })
   );
 });
-// событие activate
+// activate event
 self.addEventListener('activate', evt => {
   evt.waitUntil(
     caches.keys().then(keys => {
@@ -28,7 +28,8 @@ self.addEventListener('activate', evt => {
     })
   );
 });
-// событие fetch
+// When we change the name we could have multiple cache, to avoid that we need to delet the old cache, so with this function we check the key that is our cache naming, if it is different from the actual naming we delete it, in this way we will always have only the last updated cache.
+// fetch event
 self.addEventListener('fetch', evt => {
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
