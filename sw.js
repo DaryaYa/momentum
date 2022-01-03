@@ -4,7 +4,6 @@ const assets = [
   '/index.html',
  '/script.js',
   '/style.css',
-  '/script.min.js',
   'https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap',
   'https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap',
 ];
